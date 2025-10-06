@@ -1,4 +1,4 @@
-ump_a_turtle
+#jump_a_turtle#
 import turtle as trtl
 import random as rand
 import leaderboard as lb
@@ -16,7 +16,7 @@ timer = 5
 counter_interval = 1000   #1000 represents 1 second
 timer_up = False
 inverse = rand.randint(1,6)
-name = input("What is your name? ")
+player_name = input("What is your name? ")
 leaderboard_file_name = "a122_leaderboard.txt"
 #-----initialize turtle-----
 spot = trtl.Turtle()
@@ -102,7 +102,7 @@ def manage_leaderboard():
 
   # show the leaderboard with or without the current player
   if (len(leader_scores_list) < 5 or score >= leader_scores_list[4]):
-    lb.update_leaderboard(leaderboard_file_names, leader_names_list, leader_scores_list, player_name, score)
+    lb.update_leaderboard(leaderboard_file_name, leader_names_list, leader_scores_list, player_name, score)
     lb.draw_leaderboard(True, leader_names_list, leader_scores_list, spot, score)
 
   else:
